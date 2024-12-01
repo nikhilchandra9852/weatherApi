@@ -30,6 +30,6 @@ jobs:
       # Push the Docker image 
       - name: Push the Docker image
         run: |
-          docker tag my-image-tag:${date +%s) ${{ secrets.DOCKER_USERNAME }}/my-image-name:latest
+          docker tag my-image-tag:$(date +%s) ${{ secrets.DOCKER_USERNAME }}/my-image-name:latest
           docker push  ${{ secrets.DOCKER_USERNAME }}/my-image-name:latest
           
